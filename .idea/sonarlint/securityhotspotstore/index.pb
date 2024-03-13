@@ -27,3 +27,5 @@ w
 G.idea/sonarlint/issuestore/e/f/ef3b7f60da10b22e8947880fe864c0b7147b3f35,6\0\60537609eea104b5d46a7ddf0a590e976417954c
 Å
 Q.idea/sonarlint/securityhotspotstore/0/1/0102837cda298112b5cb0d4d29074400689a1a85,2\8\28105f26d21410d8eff33b35f837cc1241977065
+8
+build.py,e\9\e9caecba20d7dec63ecb344525ee3224abb3827c

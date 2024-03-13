@@ -2,8 +2,8 @@ version: '3'
 
 services:
 
-  imob_users-db-db:
-    image: postgres-latest
+  imob_users-db:
+    image: postgres:latest
     container_name: imob_users-db
     networks:
       - valeimoveis
@@ -15,7 +15,7 @@ services:
       - 5432:5432
 
   customer_visit-db:
-    image: postgres-latest
+    image: postgres:latest
     container_name: customer_visit-db
     networks:
       - valeimoveis
@@ -26,20 +26,20 @@ services:
     ports:
       - 5433:5432
 
-  realestate-db:
-    image: postgres-latest
-    container_name: realestate-db
+  real_estate-db:
+    image: postgres:latest
+    container_name: real_estate-db
     networks:
       - valeimoveis
     environment:
-      - POSTGRES_DB=realestate-db
+      - POSTGRES_DB=real_estate-db
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
       - 5434:5432
 
   wait_list-db:
-    image: postgres-latest
+    image: postgres:latest
     container_name: wait_list-db
     networks:
       - valeimoveis
@@ -49,7 +49,6 @@ services:
       - POSTGRES_PASSWORD=postgres
     ports:
       - 5435:5432
-
 
   kafka:
     container_name: kafka
@@ -89,6 +88,78 @@ services:
           brokers: ["kafka:29092"]
     depends_on:
       - "kafka"
+
+  vib-customervisit:
+    build: './vib-customervisit'
+    container_name: vib-customervisit
+    depends_on:
+      - kafka
+      - customer_visit-db
+    networks:
+      - valeimoveis
+    environment:
+      - KAFKA_BROKER=kafka:29092
+      - DB_HOST=customer_visit-db
+      - DB_NAME=customer_visit-db
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+    ports:
+      - "8090:8090"
+
+  vib-realestate:
+    build: './vib-realestate'
+    container_name: vib-realestate
+    depends_on:
+      - kafka
+      - real_estate-db
+    networks:
+      - valeimoveis
+    environment:
+      - KAFKA_BROKER=kafka:29092
+      - DB_HOST=real_estate-db
+      - DB_NAME=real_estate-db
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+    ports:
+      - "8091:8091"
+
+  vib-user:
+    build: './vib-user'
+    container_name: vib-user
+    depends_on:
+      - kafka
+      - imob_users-db
+    networks:
+      - valeimoveis
+    environment:
+      - KAFKA_BROKER=kafka:29092
+      - DB_HOST=imob_users-db
+      - DB_NAME=imob_users-db
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+    ports:
+      - "8092:8092"
+
+  vib-waitlist:
+    build: './vib-waitlist'
+    container_name: vib-waitlist
+    depends_on:
+      - kafka
+      - wait_list-db
+    networks:
+      - valeimoveis
+    environment:
+      - KAFKA_BROKER=kafka:29092
+      - DB_HOST=wait_list-db
+      - DB_NAME=wait_list-db
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+    ports:
+      - "8093:8093"
 
 networks:
   valeimoveis:
