@@ -3,48 +3,52 @@ version: '3'
 services:
 
   imob_users-db-db:
-    image: mongo-latest
+    image: postgres-latest
     container_name: imob_users-db
     networks:
       - valeimoveis
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=admin
-      - MONGO_INITIDB_ROOT_PASSWORD=123456
+      - POSTGRES_DB=imob_users-db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
     ports:
-      - 27017:27017
+      - 5432:5432
 
   customer_visit-db:
-    image: mongo-latest
+    image: postgres-latest
     container_name: customer_visit-db
     networks:
       - valeimoveis
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=admin
-      - MONGO_INITIDB_ROOT_PASSWORD=123456
+      - POSTGRES_DB=customer_visit-db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
     ports:
-      - 27018:27017
+      - 5433:5432
 
   realestate-db:
-    image: mongo-latest
+    image: postgres-latest
     container_name: realestate-db
     networks:
       - valeimoveis
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=admin
-      - MONGO_INITIDB_ROOT_PASSWORD=123456
+      - POSTGRES_DB=realestate-db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
     ports:
-      - 27019:27017
+      - 5434:5432
 
   wait_list-db:
-    image: mongo-latest
+    image: postgres-latest
     container_name: wait_list-db
     networks:
       - valeimoveis
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=admin
-      - MONGO_INITIDB_ROOT_PASSWORD=123456
+      - POSTGRES_DB=wait_list-db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
     ports:
-      - 27020:27017
+      - 5435:5432
 
 
   kafka:

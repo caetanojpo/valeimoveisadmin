@@ -9,6 +9,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vib-customervisit/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/vib-customervisit/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vib-realestate/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/vib-realestate/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vib-user/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/vib-user/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vib-user/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/vib-user/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vib-waitlist/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/vib-waitlist/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

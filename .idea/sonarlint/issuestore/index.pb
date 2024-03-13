@@ -21,3 +21,9 @@ E
 vib-user/HELP.md,c\b\cb6536167ffa62d84cff7075333952062799f56f
 B
 docker-compose.yml,3\5\35b8c13cf2eb2a194eada000eb310d65aed53b2a
+w
+G.idea/sonarlint/issuestore/0/1/0102837cda298112b5cb0d4d29074400689a1a85,d\8\d835c2765f0ad84db6608f3ac8430da9fefc9007
+w
+G.idea/sonarlint/issuestore/e/f/ef3b7f60da10b22e8947880fe864c0b7147b3f35,6\0\60537609eea104b5d46a7ddf0a590e976417954c
+Å
+Q.idea/sonarlint/securityhotspotstore/0/1/0102837cda298112b5cb0d4d29074400689a1a85,2\8\28105f26d21410d8eff33b35f837cc1241977065
