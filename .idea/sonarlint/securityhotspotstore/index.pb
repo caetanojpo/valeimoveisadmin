@@ -19,3 +19,5 @@ E
 ,vib-user/src/main/resources/application.yaml,c\2\c27f6cae129bbf6cc4f705f4edb2b784819e917c
 @
 vib-user/HELP.md,c\b\cb6536167ffa62d84cff7075333952062799f56f
+B
+docker-compose.yml,3\5\35b8c13cf2eb2a194eada000eb310d65aed53b2a

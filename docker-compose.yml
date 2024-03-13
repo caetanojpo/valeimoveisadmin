@@ -2,6 +2,51 @@ version: '3'
 
 services:
 
+  imob_users-db-db:
+    image: mongo-latest
+    container_name: imob_users-db
+    networks:
+      - valeimoveis
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITIDB_ROOT_PASSWORD=123456
+    ports:
+      - 27017:27017
+
+  customer_visit-db:
+    image: mongo-latest
+    container_name: customer_visit-db
+    networks:
+      - valeimoveis
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITIDB_ROOT_PASSWORD=123456
+    ports:
+      - 27018:27017
+
+  realestate-db:
+    image: mongo-latest
+    container_name: realestate-db
+    networks:
+      - valeimoveis
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITIDB_ROOT_PASSWORD=123456
+    ports:
+      - 27019:27017
+
+  wait_list-db:
+    image: mongo-latest
+    container_name: wait_list-db
+    networks:
+      - valeimoveis
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITIDB_ROOT_PASSWORD=123456
+    ports:
+      - 27020:27017
+
+
   kafka:
     container_name: kafka
     image: obsidiandynamics/kafka
@@ -10,7 +55,7 @@ services:
       - "2181:2181"
       - "9092:9092"
     networks:
-      - orchestrator-saga
+      - valeimoveis
     environment:
       KAFKA_LISTENERS: "INTERNAL://:29092,EXTERNAL://:9092"
       KAFKA_ADVERTISED_LISTENERS: "INTERNAL://kafka:29092,EXTERNAL://localhost:9092"
@@ -32,7 +77,7 @@ services:
     ports:
       - "8081:8080"
     networks:
-      - orchestrator-saga
+      - valeimoveis
     environment:
       CONFIG_FILEPATH: /tmp/config.yml
       CONSOLE_CONFIG_FILE: |
@@ -42,5 +87,5 @@ services:
       - "kafka"
 
 networks:
-  orchestrator-saga:
+  valeimoveis:
     driver: bridge
