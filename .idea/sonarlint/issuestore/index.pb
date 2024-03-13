@@ -9,3 +9,13 @@ I
 vib-realestate/.gitignore,d\0\d0ed4bafc8933b35bf68cbe21a397516ae6a2068
 L
 vib-customervisit/.gitignore,e\f\ef3b7f60da10b22e8947880fe864c0b7147b3f35
+@
+vib-user/gradlew,5\1\51ea6dea89372a9d510132577304e0d9b6b19371
+H
+vib-user/settings.gradle,6\5\656ee4c18a5569eb4517402ce8fadfe2cc5a4bc3
+E
+vib-user/build.gradle,d\9\d9dd472d03e1321239cffbea756a7b159041e054
+\
+,vib-user/src/main/resources/application.yaml,c\2\c27f6cae129bbf6cc4f705f4edb2b784819e917c
+@
+vib-user/HELP.md,c\b\cb6536167ffa62d84cff7075333952062799f56f
