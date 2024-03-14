@@ -13,8 +13,9 @@ public class User {
     private String cellphone;
     private UserPermission userPermission;
     private Address address;
+    private Boolean isActive;
 
-    public User(Long id, String email, String password, String cpf, String rg, String cellphone, UserPermission userPermission, Address address) {
+    public User(Long id, String email, String password, String cpf, String rg, String cellphone, UserPermission userPermission, Address address, Boolean isActive) {
         this.id = id;
         this.email = email;
         this.password = password;
@@ -23,6 +24,7 @@ public class User {
         this.cellphone = cellphone;
         this.userPermission = userPermission;
         this.address = address;
+        this.isActive = isActive;
     }
 
     public User() {
@@ -90,6 +92,14 @@ public class User {
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    public Boolean getActive() {
+        return isActive;
+    }
+
+    public void setActive(Boolean active) {
+        isActive = active;
     }
 
     @Override
