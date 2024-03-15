@@ -3,16 +3,26 @@ version: '3'
 services:
 
   imob_users-db:
-    image: postgres:latest
+    image: mongo:latest
     container_name: imob_users-db
     networks:
       - valeimoveis
     environment:
-      - POSTGRES_DB=imob_users-db
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=123456
     ports:
-      - 5432:5432
+      - 27017:27017
+
+  logging-db:
+    image: mongo:latest
+    container_name: logging-db
+    networks:
+      - valeimoveis
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=123456
+    ports:
+      - 27018:27017
 
   customer_visit-db:
     image: postgres:latest
@@ -89,6 +99,18 @@ services:
     depends_on:
       - "kafka"
 
+  vib-apigateway:
+    build: './vib-apigateway'
+    container_name: vib-apigateway
+    depends_on:
+      - kafka
+    networks:
+      - valeimoveis
+    environment:
+      - KAFKA_BROKER=kafka:29092
+    ports:
+      - "3000:3000"
+
   vib-customervisit:
     build: './vib-customervisit'
     container_name: vib-customervisit
@@ -135,11 +157,7 @@ services:
       - valeimoveis
     environment:
       - KAFKA_BROKER=kafka:29092
-      - DB_HOST=imob_users-db
-      - DB_NAME=imob_users-db
-      - DB_PORT=5432
-      - DB_USER=postgres
-      - DB_PASSWORD=postgres
+      - MONGO_DB_URI=mongodb://admin:123456@imob_users-db:27017
     ports:
       - "8092:8092"
 
@@ -160,6 +178,21 @@ services:
       - DB_PASSWORD=postgres
     ports:
       - "8093:8093"
+
+  vib-logging:
+    build: './vib-logging'
+    container_name: vib-logging
+    depends_on:
+      - kafka
+      - logging-db
+    networks:
+      - valeimoveis
+    environment:
+      - KAFKA_BROKER=kafka:29092
+      - MONGO_DB_URI=mongodb://admin:123456@logging-db:27017
+    ports:
+      - "8094:8094"
+
 
 networks:
   valeimoveis:
