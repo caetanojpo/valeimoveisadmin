@@ -7,6 +7,7 @@ import br.com.valeimoveisadm.vibuser.application.core.domain.User;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 import org.mapstruct.factory.Mappers;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.List;
 
@@ -16,6 +17,7 @@ public interface UserMapper {
 
     User toUser(CreateUser createUser);
     User toUser(UserEntity userEntity);
+    User toUser(UserDetails userDetails);
 
     List<User> toUserList(List<UserEntity> userEntityList);
 

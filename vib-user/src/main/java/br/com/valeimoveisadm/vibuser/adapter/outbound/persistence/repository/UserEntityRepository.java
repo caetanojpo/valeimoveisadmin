@@ -6,6 +6,7 @@ import br.com.valeimoveisadm.vibuser.application.core.domain.User;
 import br.com.valeimoveisadm.vibuser.application.core.exceptions.ObjectNotFoundException;
 import br.com.valeimoveisadm.vibuser.application.ports.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -34,10 +35,10 @@ public class UserEntityRepository implements UserRepository {
 
     @Override
     public User findByEmail(String email) {
-        UserEntity userEntity = jpaRepository.findbyEmail(email)
+        UserDetails userDetails = jpaRepository.findByEmail(email)
                 .orElseThrow(() -> new ObjectNotFoundException(UserEntity.class.getSimpleName(), email));
 
-        return mapper.toUser(userEntity);
+        return mapper.toUser(userDetails);
     }
 
     @Override

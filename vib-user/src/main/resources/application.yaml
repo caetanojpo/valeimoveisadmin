@@ -35,3 +35,7 @@ spring:
         apache:
           kafka: INFO
 
+  api:
+    security:
+      token:
+        secret: ${JWT_SECRET:secret123}

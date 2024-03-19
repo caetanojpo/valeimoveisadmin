@@ -4,7 +4,7 @@ import br.com.valeimoveisadm.vibuser.adapter.inbound.rest.dto.response.EventResp
 
 public interface JsonUtils {
 
-    public String toJson(Object object);
+    String toJson(Object object);
 
-    public EventResponse toEvent(String json);
+    EventResponse toEvent(String json);
 }

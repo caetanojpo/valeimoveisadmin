@@ -5,9 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c261157-db99-47d6-bbbb-7b318b0f1b3d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/9/e9caecba20d7dec63ecb344525ee3224abb3827c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/9/e9caecba20d7dec63ecb344525ee3224abb3827c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.py" beforeDir="false" afterPath="$PROJECT_DIR$/build.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/application/core/exceptions/TokenException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/infrastructure/security/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/infrastructure/security/TokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vib-user/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/vib-user/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/adapter/inbound/messaging/KafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/adapter/inbound/messaging/KafkaConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/adapter/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/adapter/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/adapter/outbound/messaging/KafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/adapter/outbound/messaging/KafkaProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/adapter/outbound/persistence/repository/UserEntityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/adapter/outbound/persistence/repository/UserEntityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/adapter/outbound/persistence/repository/UserJpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/adapter/outbound/persistence/repository/UserJpaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/application/ports/messaging/MessageConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/application/ports/messaging/MessageConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/application/ports/messaging/MessageProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/application/ports/messaging/MessageProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/application/ports/utils/JsonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/application/ports/utils/JsonUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/config/BeanConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/infrastructure/config/BeanConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/config/KafkaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/vib-user/src/main/java/br/com/valeimoveisadm/vibuser/infrastructure/config/KafkaConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vib-user/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/vib-user/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,4 +1,4 @@
-package br.com.valeimoveisadm.vibuser.config;
+package br.com.valeimoveisadm.vibuser.infrastructure.config;
 
 import lombok.RequiredArgsConstructor;
 import org.apache.kafka.clients.admin.NewTopic;
@@ -31,7 +31,7 @@ public class KafkaConfig {
     @Value("${spring.kafka.auto-offset-reset}")
     private String autoOffsetReset;
 
-    @Value("${spring.kafka.topic.teste")
+    @Value("${spring.kafka.topic.teste}")
     private String testeTopic;
 
     private static final Integer PARTITION_COUNT = 1;
