@@ -1,9 +1,8 @@
-package br.com.valeimoveisadm.vibuser.application.ports.outbound;
+package br.com.valeimoveisadm.vibuser.application.ports.repository;
 
 import br.com.valeimoveisadm.vibuser.application.core.domain.User;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface UserRepository {
 

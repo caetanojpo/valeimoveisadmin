@@ -1,7 +1,7 @@
 package br.com.valeimoveisadm.vibuser.application.core.usecase;
 
 import br.com.valeimoveisadm.vibuser.application.core.domain.User;
-import br.com.valeimoveisadm.vibuser.application.ports.outbound.UserRepository;
+import br.com.valeimoveisadm.vibuser.application.ports.repository.UserRepository;
 
 public class RemoveUser {
 

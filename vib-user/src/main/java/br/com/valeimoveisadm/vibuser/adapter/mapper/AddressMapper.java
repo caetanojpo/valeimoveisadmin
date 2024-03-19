@@ -1,6 +1,6 @@
-package br.com.valeimoveisadm.vibuser.adapter.inbound.mapper;
+package br.com.valeimoveisadm.vibuser.adapter.mapper;
 
-import br.com.valeimoveisadm.vibuser.adapter.inbound.dto.request.ChangeAddress;
+import br.com.valeimoveisadm.vibuser.adapter.inbound.rest.dto.request.ChangeAddress;
 import br.com.valeimoveisadm.vibuser.application.core.domain.Address;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;

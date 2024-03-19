@@ -1,8 +1,8 @@
-package br.com.valeimoveisadm.vibuser.adapter.inbound.mapper;
+package br.com.valeimoveisadm.vibuser.adapter.mapper;
 
-import br.com.valeimoveisadm.vibuser.adapter.inbound.dto.request.CreateUser;
-import br.com.valeimoveisadm.vibuser.adapter.inbound.dto.response.UserResponse;
-import br.com.valeimoveisadm.vibuser.adapter.outbound.entity.UserEntity;
+import br.com.valeimoveisadm.vibuser.adapter.inbound.rest.dto.request.CreateUser;
+import br.com.valeimoveisadm.vibuser.adapter.inbound.rest.dto.response.UserResponse;
+import br.com.valeimoveisadm.vibuser.adapter.outbound.persistence.entity.UserEntity;
 import br.com.valeimoveisadm.vibuser.application.core.domain.User;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;

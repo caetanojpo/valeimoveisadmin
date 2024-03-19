@@ -1,10 +1,10 @@
-package br.com.valeimoveisadm.vibuser.adapter.inbound.controller;
+package br.com.valeimoveisadm.vibuser.adapter.inbound.rest.controller;
 
-import br.com.valeimoveisadm.vibuser.adapter.inbound.dto.request.ChangeAddress;
-import br.com.valeimoveisadm.vibuser.adapter.inbound.dto.request.CreateUser;
-import br.com.valeimoveisadm.vibuser.adapter.inbound.dto.response.UserResponse;
-import br.com.valeimoveisadm.vibuser.adapter.inbound.mapper.AddressMapper;
-import br.com.valeimoveisadm.vibuser.adapter.inbound.mapper.UserMapper;
+import br.com.valeimoveisadm.vibuser.adapter.inbound.rest.dto.request.ChangeAddress;
+import br.com.valeimoveisadm.vibuser.adapter.inbound.rest.dto.request.CreateUser;
+import br.com.valeimoveisadm.vibuser.adapter.inbound.rest.dto.response.UserResponse;
+import br.com.valeimoveisadm.vibuser.adapter.mapper.AddressMapper;
+import br.com.valeimoveisadm.vibuser.adapter.mapper.UserMapper;
 import br.com.valeimoveisadm.vibuser.application.core.domain.Address;
 import br.com.valeimoveisadm.vibuser.application.core.domain.User;
 import br.com.valeimoveisadm.vibuser.application.core.enums.UserPermission;

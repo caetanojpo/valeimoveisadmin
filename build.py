@@ -21,6 +21,8 @@ def docker_compose_up():
 def build_all_applications():
     print("Starting to build applications!")
     threading.Thread(target=build_application,
+                     args={"vib-apigateway"}).start()
+    threading.Thread(target=build_application,
                      args={"vib-customervisit"}).start()
     threading.Thread(target=build_application,
                      args={"vib-realestate"}).start()
@@ -28,6 +30,8 @@ def build_all_applications():
                      args={"vib-user"}).start()
     threading.Thread(target=build_application,
                      args={"vib-waitlist"}).start()
+    threading.Thread(target=build_application,
+                     args={"vib-logging"}).start()
 
 
 def remove_remaining_containers():

@@ -1,4 +1,4 @@
-package br.com.valeimoveisadm.vibuser.adapter.inbound.dto.response;
+package br.com.valeimoveisadm.vibuser.adapter.inbound.rest.dto.response;
 
 import br.com.valeimoveisadm.vibuser.application.core.domain.Address;
 import br.com.valeimoveisadm.vibuser.application.core.enums.UserPermission;

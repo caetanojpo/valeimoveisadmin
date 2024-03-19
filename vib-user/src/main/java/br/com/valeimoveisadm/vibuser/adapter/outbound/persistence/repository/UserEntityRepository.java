@@ -1,10 +1,10 @@
-package br.com.valeimoveisadm.vibuser.adapter.outbound.repository;
+package br.com.valeimoveisadm.vibuser.adapter.outbound.persistence.repository;
 
-import br.com.valeimoveisadm.vibuser.adapter.inbound.mapper.UserMapper;
-import br.com.valeimoveisadm.vibuser.adapter.outbound.entity.UserEntity;
+import br.com.valeimoveisadm.vibuser.adapter.mapper.UserMapper;
+import br.com.valeimoveisadm.vibuser.adapter.outbound.persistence.entity.UserEntity;
 import br.com.valeimoveisadm.vibuser.application.core.domain.User;
 import br.com.valeimoveisadm.vibuser.application.core.exceptions.ObjectNotFoundException;
-import br.com.valeimoveisadm.vibuser.application.ports.outbound.UserRepository;
+import br.com.valeimoveisadm.vibuser.application.ports.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 

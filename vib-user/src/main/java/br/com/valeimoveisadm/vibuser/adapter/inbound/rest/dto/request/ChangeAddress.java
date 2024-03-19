@@ -1,4 +1,4 @@
-package br.com.valeimoveisadm.vibuser.adapter.inbound.dto.request;
+package br.com.valeimoveisadm.vibuser.adapter.inbound.rest.dto.request;
 
 import br.com.valeimoveisadm.vibuser.application.core.enums.States;
 

@@ -1,4 +1,4 @@
-package br.com.valeimoveisadm.vibuser.adapter.outbound.entity;
+package br.com.valeimoveisadm.vibuser.adapter.outbound.persistence.entity;
 
 import br.com.valeimoveisadm.vibuser.application.core.enums.States;
 import jakarta.persistence.Embeddable;

@@ -1,6 +1,6 @@
-package br.com.valeimoveisadm.vibuser.adapter.outbound.repository;
+package br.com.valeimoveisadm.vibuser.adapter.outbound.persistence.repository;
 
-import br.com.valeimoveisadm.vibuser.adapter.outbound.entity.UserEntity;
+import br.com.valeimoveisadm.vibuser.adapter.outbound.persistence.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
