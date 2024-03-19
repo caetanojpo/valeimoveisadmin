@@ -22,7 +22,7 @@ public record ChangeAddress(
         @NotBlank(message = "City is required")
         String city,
 
-        @Pattern(regexp = "\\d{5}-\\d{3}", message = "Invalid postal code format (XXXXX-XXX)")
+        @Pattern(regexp = "\\d{5}-\\d{3}", message = "{POSTALCODE.PATTERN")
         String postalCode,
 
         @NotNull(message = "State is required")
