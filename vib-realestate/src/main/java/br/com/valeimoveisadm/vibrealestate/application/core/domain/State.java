@@ -1,11 +1,11 @@
 package br.com.valeimoveisadm.vibrealestate.application.core.domain;
 
 public class State {
-    private Long id;
+    private Integer id;
     private String name;
     private String uf;
 
-    public State(Long id, String name, String uf) {
+    public State(Integer id, String name, String uf) {
         this.id = id;
         this.name = name;
         this.uf = uf;
@@ -14,11 +14,11 @@ public class State {
     public State() {
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
