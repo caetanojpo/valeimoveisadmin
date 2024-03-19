@@ -1,10 +1,10 @@
 server:
-  port: 8092
+  port: 8094
   include-stacktrace: never
 
 spring:
   application:
-    name: vib-user
+    name: vib-logging
 
   kafka:
     bootstrap-servers: ${KAFKA_BROKER:localhost:9092}
@@ -16,8 +16,8 @@ spring:
 
   datasource:
     mongodb:
-      database: imob_users-db
-      uri: ${MONGO_DB_URI:mongodb://admin:123456@localhost:27017}
+      database: logging-db
+      uri: ${MONGO_DB_URI:mongodb://admin:123456@localhost:27018}
 
   logging:
     level:
@@ -25,7 +25,3 @@ spring:
         apache:
           kafka: INFO
 
-  api:
-    security:
-      token:
-        secret: ${JWT_SECRET:secret123}
